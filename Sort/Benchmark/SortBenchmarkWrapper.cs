@@ -50,6 +50,13 @@ namespace Sort.Benchmark
 			sorter.Sort(GetWorkCopyOfArray());
 		}
 
+		[Benchmark(Description = "Quick")]
+		public void TestQuick()
+		{
+			var sorter = new Quick();
+			sorter.Sort(GetWorkCopyOfArray());
+		}
+
 		public static int[] GetWorkCopyOfArray()
 		{
 			return _arr.Select(a => (int)a).ToArray();

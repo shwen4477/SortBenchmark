@@ -36,6 +36,11 @@ namespace Sort
 			Console.WriteLine();
 			Console.WriteLine(string.Join(",", res));
 
+			s = new Quick();
+			res = s.Sort(SortBenchmarkWrapper.GetWorkCopyOfArray());
+			Console.WriteLine();
+			Console.WriteLine(string.Join(",", res));
+
 			Console.ReadLine();
 			BenchmarkRunner.Run<SortBenchmarkWrapper>();
 			Console.ReadLine();
